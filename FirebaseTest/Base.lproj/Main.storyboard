@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -16,12 +19,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyC-G3-l69">
+                                <rect key="frame" x="76" y="208" width="449" height="50"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jX2-6f-wVq"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-LH-ccz">
+                                <rect key="frame" x="76" y="275" width="449" height="50"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="02O-lK-uMP"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0de-8H-0ja">
+                                <rect key="frame" x="76" y="365" width="449" height="68"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.47341056034482759" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="5f2-p1-cAZ"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I22-KZ-jdC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTB-0d-Dhv">
+                                <rect key="frame" x="76" y="460" width="449" height="68"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.58372844827586212" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="TVY-w1-dyw"/>
+                                </constraints>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ap-2L-5IT">
+                                <rect key="frame" x="76" y="460" width="449" height="68"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.58372844830000004" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m95-fl-leh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ap-2L-5IT" firstAttribute="leading" secondItem="iTB-0d-Dhv" secondAttribute="leading" id="1PO-Ma-6j3"/>
+                            <constraint firstItem="iTB-0d-Dhv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="2yb-cW-dll"/>
+                            <constraint firstItem="0de-8H-0ja" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="345" id="5X1-ia-ttY"/>
+                            <constraint firstItem="0de-8H-0ja" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="5ud-xa-ciM"/>
+                            <constraint firstItem="7ap-2L-5IT" firstAttribute="firstBaseline" secondItem="iTB-0d-Dhv" secondAttribute="baseline" id="7KH-h1-au4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NyC-G3-l69" secondAttribute="trailing" constant="55" id="DbB-f1-JWS"/>
+                            <constraint firstItem="Jt2-LH-ccz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="EIt-U5-B8W"/>
+                            <constraint firstItem="NyC-G3-l69" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="PTt-du-ahE"/>
+                            <constraint firstItem="NyC-G3-l69" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="Y6t-Cx-gkl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0de-8H-0ja" secondAttribute="trailing" constant="55" id="ibw-iE-hke"/>
+                            <constraint firstItem="Jt2-LH-ccz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="kaz-oo-M5X"/>
+                            <constraint firstItem="7ap-2L-5IT" firstAttribute="top" secondItem="iTB-0d-Dhv" secondAttribute="top" id="kfe-J7-UWC"/>
+                            <constraint firstItem="7ap-2L-5IT" firstAttribute="baseline" secondItem="iTB-0d-Dhv" secondAttribute="firstBaseline" id="lOu-ZX-J2Z"/>
+                            <constraint firstItem="iTB-0d-Dhv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="440" id="nVb-pR-D5z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jt2-LH-ccz" secondAttribute="trailing" constant="55" id="sua-Or-gtw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iTB-0d-Dhv" secondAttribute="trailing" constant="55" id="xUz-s2-HHn"/>
+                            <constraint firstItem="7ap-2L-5IT" firstAttribute="trailing" secondItem="iTB-0d-Dhv" secondAttribute="trailing" id="yPm-5D-d3k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="NyC-G3-l69" id="4GP-PA-68J"/>
+                        <outlet property="passwordField" destination="Jt2-LH-ccz" id="PJ3-QD-2cj"/>
+                        <segue destination="aKg-lX-feG" kind="presentation" identifier="login_success" id="9Ga-PU-CqM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="35"/>
+            <point key="canvasLocation" x="127" y="27"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="xWy-XI-SFp">
